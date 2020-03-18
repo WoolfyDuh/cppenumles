@@ -10,13 +10,24 @@ int main()
 	cardclass aCard(cardclass::cardType::Heart,color::RED);
 	cardclass anotherCard(cardclass::cardType::Diamond,color::RED);
 	cardclass aDifferentCard(cardclass::cardType::Spade, color::BLACK);
+	cardclass aBadCard(cardclass::cardType::Clover, color::RED);
 
+	std::cout << "########################################" << std::endl;
+	if (aCard.GetCardType() == cardclass::cardType::Heart && aCard.getCardColor() == color::RED) {
+		std::cout << "I... aCard.... MAKE SENSE!" << std::endl;
+	}
+	std::cout << "########################################" << std::endl;
+	if (aBadCard.GetCardType() != cardclass::cardType::Clover || aCard.getCardColor() != color::BLACK) {
+		std::cout << "I... BADCARD AM HAVING A VERY VERY VERY BAD DAY" << std::endl;
+	}
+	std::cout << "########################################" << std::endl;
 	if (aCard.GetCardType() == anotherCard.GetCardType()) {
 		std::cout << "THESE ARE THE SAME CARD BAKA!" << std::endl;
 	}
 	else {
 		std::cout << "THESE AREN'T THE SAME CARD NINCOMPOOP!" << std::endl;
 	}
+	std::cout << "########################################" << std::endl;
 	if (aCard.getCardColor() == aDifferentCard.getCardColor())
 	{
 		std::cout << "we are the same color woohoo!" << std::endl;
@@ -24,6 +35,7 @@ int main()
 	else {
 		std::cout << "we don't belong together qwq" << std::endl;
 	}
+	std::cout << "########################################" << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
